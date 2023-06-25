@@ -1,0 +1,157 @@
+body {
+    /* background-color:aqua; */
+    /* color: inherit; */
+    font-family: "Times New Roman", Georgia, Serif;
+    padding: 0;
+    margin: 0;
+}
+
+.heading-about{
+    flex-grow: 1;
+    padding: 8px 16px;
+    box-sizing: inherit;
+}
+.heading-right{
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+.heading{
+    align-items: center;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 0;
+    z-index: 2;
+    background: white;
+    letter-spacing: 4px;
+    display: flex;
+    justify-content: space-between;
+    font: 15px;
+    line-height: 1.5;
+    padding: 8px 16px;
+    box-shadow: 0 2px 5px 0 rgba(0,0,0,0.16), 0 2px 10px 0 rgba(0,0,0,0.12);
+}
+
+.image{
+    vertical-align: middle;
+    max-width: 100%;
+    background-repeat: no-repeat;
+    background-size: 100%;
+    position: relative;
+    
+}
+.myhr{
+    border-color: rgba(0,0,0,0.1);
+}
+
+.container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+}
+
+.image img{
+    width: 100%;
+    object-fit: cover;
+    max-height: 800px;
+}
+.image-text{
+    letter-spacing: 8px;
+    left: 10px;
+    bottom: 20px;
+    font-size: 36px!important;
+    font-family: "Times New Roman", Georgia, Serif;
+    letter-spacing: 8px;
+    font-weight: 400;
+    position: absolute;
+    padding: 12px 24px;
+}
+
+
+.aboutcatering{
+    display: flex;
+    justify-content: center;
+    padding-top: 64px;
+    padding-bottom: 64px;
+    font-size: 15px;
+    line-height: 1.5;
+}
+.aboutcatering.right .about-text{
+    order: -1;
+}
+.about-text{
+    float: left;
+    font-size: 18px;
+    padding: 12px 24px;
+    text-align: center;
+    font-weight: 400px;
+    letter-spacing: 5px;
+    margin: 10px 0;
+}
+.content{
+    font-size: 36px;
+}
+.content2{
+    margin: 10px 0;
+}
+.content3{
+    letter-spacing: 0;
+    text-align: left;
+    
+}
+.content4{
+    color: #757575;
+    margin: 18px 0;
+}
+.about-image{
+    padding: 12px 24px;
+}
+
+.right-content2{
+    text-align: left;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.under{
+    color: #757575!important;
+    font-size: 15px;
+    margin: 15px 0;
+}
+
+.contact{
+    padding-top: 64px 0;
+    margin: 15px 0;
+}
+.address{
+    color: #607d8b;
+    font-size: 18px;
+    font-weight: bolder;
+    margin: 18px 0;
+}
+.myinput{
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    padding: 16px 8px;
+}
+.myinput2{
+    border: none;
+    display: inline-block;
+    padding: 8px 16px;
+    vertical-align: middle;
+    background-color: #f1f1f1;
+    color: black;
+    margin: 16px 0;
+    transition: 0.4s;
+}
+.myinput2:hover{
+    background-color: #ccc;
+}
+.end{
+    padding: 47px;
+    text-align: center;
+    background-color: #f1f1f1;
+}
