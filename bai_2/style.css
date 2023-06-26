@@ -1,14 +1,22 @@
+
 .container{
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
     font-family: Verdana,sans-serif;
+    
 }
 .header{
-    display: flex;
-    justify-content: space-between;
     padding: 16px 0;
     font-size: 24px;
+    max-width: 1200px;
+    top: 0;
+    background-color: #eee;
+}
+.heading{
+   
+    display: flex;
+    justify-content: space-between;
 }
 .image-text{
     display: flex;
@@ -16,13 +24,14 @@
     text-align: center;
 }
 .img{
+    text-align: center;
     object-fit: cover;
     width: 100%;
 }
 .items-text1{
     margin: 10px 0;
     font-size: 24px;
-    
+    text-align: center;
     font-weight: 400;
 }
 .items-text2{
@@ -58,4 +67,13 @@
 .number :hover{
     color: aliceblue;
     background-color: black;
+}
+.about{
+    border: 0;
+    border-top: 1px solid #eee;
+    margin: 20px 0;
+}
+.img2{
+    width: 800px;
+    margin: auto;
 }
