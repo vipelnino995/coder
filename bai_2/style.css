@@ -9,12 +9,13 @@
 .header{
     padding: 16px 0;
     font-size: 24px;
-    max-width: 1200px;
+    width: 100%;
     top: 0;
     background-color: #eee;
+    position: fixed;
 }
 .heading{
-   
+    max-width: 1200px;
     display: flex;
     justify-content: space-between;
 }
