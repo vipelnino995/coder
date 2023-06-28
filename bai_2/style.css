@@ -1,12 +1,11 @@
-body{
-    font-family: "Karma", sans-serif;
-}
+
 
 .container {
     width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    font-size: 15px;
+    font-size: 24px;
+    font-weight: normal;
 }
 
 .header {
@@ -111,9 +110,27 @@ body{
 .img-end{
     display: flex;
     padding: 8px 16px;
-    border-bottom: 1px solid #ddd;
     font-size: 15px;
+    border-bottom: 1px solid #ddd;
 }
 .img-end1{
     margin-right: 16px;
+   
 }
+.img-end2{
+    margin-right: 16px;
+}
+.fisrt{
+    font-size: 24px;
+}
+.img-next{
+    display: flex;
+    border: #fff;
+}
+.img-end :hover{
+    background-color: #ccc;
+}
+
+
+
+
