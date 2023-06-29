@@ -132,5 +132,14 @@
 }
 
 
+.fisrt-text{
+    display: inline-block;
+    padding-left: 8px;
+    padding-right: 8px;
+    text-align: center;
+    color: #fff!important;
+    background-color: #616161;
+    font-size: 12px!important;
+}
 
 
