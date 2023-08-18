@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Danh sách học sinh</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
+        integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+    <style>
+        .opacity-03 {
+            opacity: 0.3;
+        }
+
+        .fa-arrow-down {
+            pointer-events: none;
+            transform: translate(-5px, 3px);
+        }
+
+        .fa-arrow-up {
+            pointer-events: none;
+            transform: translateY(-3px);
+        }
+
+        .sort {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="" class="form-left" id="submit">
+            <p style="font-size: 2rem; font-weight: 500;">Student information</p>
+            <div>
+                <label class="form-left">Fullname</label>
+                <input required id="fullname" class="choose" type="text" placeholder="Enter your Fullname">
+            </div>
+            <div>
+                <label class="form-left" for="" style="display: block;">
+                    Class
+                </label>
+
+                <select class="choose" id="list-class">
+                    <option value="1">Class 1</option>
+                    <option value="2">Class 2</option>
+                    <option value="3">Class 3</option>
+                    <option value="4">Class 4</option>
+                    <option value="5">Class 5</option>
+                </select>
+            </div>
+            <div>
+                <label class="form-left" for="">Age
+                </label>
+                <input id="age" required class="choose" type="text" placeholder="Enter your age...">
+            </div>
+            <button id="input" class="choose"
+                style="text-align: center; background-color: rgb(51, 192, 51); color: aliceblue;margin-top: 1rem;">Add
+                new</button>
+
+
+        </form>
+        <div class="collums-right">
+            <p style="padding-left: 10px;font-size: 2rem; font-weight: 500;">Student list</p>
+            <div class="row">
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="filter-name">Fullname contain</label>
+                        <input type="text" id="filter-name" name="filter-name" class="form-control"
+                            placeholder="Search by name...">
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="filter-class">Class equal</label>
+                        <select name="filter-class" id="filter-class" class="form-control">
+                            <option value="">All class</option>
+                            <option value="1">Class 1</option>
+                            <option value="2">Class 2</option>
+                            <option value="3">Class 3</option>
+                            <option value="4">Class 4</option>
+                            <option value="5">Class 5</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="col-4">
+                    <div class="form-group">
+                        <label for="filter-age">Age more than</label>
+                        <input type="text" id="filter-age" name="filter-age" class="form-control"
+                            placeholder="Age more than...">
+                    </div>
+                </div>
+
+
+
+
+            </div>
+            <div>
+                <div class="table-responsive">
+                    <table class="table table-striped">
+                        <thead>
+                            <tr>
+                                <th>
+                                    #
+                                    <span class="sort small" rel="index">
+                                        <i class="fa fa-arrow-up"></i>
+                                        <i class="fa fa-arrow-down opacity-03"></i>
+                                    </span>
+                                </th>
+                                <th>
+                                    Fullname
+                                    <span class="sort small" abc="fullname">
+                                        <i class="fa fa-arrow-up opacity-03"></i>
+                                        <i class="fa fa-arrow-down opacity-03"></i>
+                                    </span>
+                                </th>
+                                <th>
+                                    Class
+                                    <span class="sort small" abc="class">
+                                        <i class="fa fa-arrow-up opacity-03"></i>
+                                        <i class="fa fa-arrow-down opacity-03"></i>
+                                    </span>
+                                </th>
+                                <th>
+                                    Age
+                                    <span class="sort small" abc="age">
+                                        <i class="fa fa-arrow-up opacity-03"></i>
+                                        <i class="fa fa-arrow-down opacity-03"></i>
+                                    </span>
+                                </th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="userslist">
+                            <tr>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <!-- Button trigger modal -->
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">
+        Launch demo modal
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <script src="./core.js"></script>
+
+
+</body>
+
+</html>

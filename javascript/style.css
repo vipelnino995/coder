@@ -1,0 +1,33 @@
+
+.row{
+    width: 600px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.form-group label {
+    display: block;
+    margin-bottom: 10px;
+}
+.padding{
+    width: 100%;
+    padding: 10px;
+}
+.list-group{
+    
+    padding-left: 0;
+    width: 600px;
+    margin: auto;
+}
+.list-group-item{
+    display: block;
+    padding: 10px;
+    border: 1px solid red;
+    border-bottom: 0;
+}
+.list-group-item:last-child{
+    border-bottom: 1px solid red;
+    border-radius: 0 0 8px 8px;
+}
+.list-group-item:first-child{
+    border-radius: 8px 8px 0 0;
+}
