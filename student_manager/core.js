@@ -3,6 +3,7 @@
 var userslist = $('#userslist')
 var form = $('#submit')
 var click = $('#click')
+var edit = $('#exampleModal')
 var users = [
     { stt: 1, name: 'nhat', class: 1, age: 19 },
     { stt: 2, name: 'loc', class: 3, age: 23 },
@@ -16,15 +17,21 @@ function render(container, items) {
     var item = items.map(function (h) {
         return `
             <tr>
-                <td>${h.stt}</td>
+                <td>${h.stt}</td> 
                 <td>${h.name}</td>
                 <td>${h.class}</td>
                 <td>${h.age}</td>
+                <td> <button type="button" class="btn btn-primary edit" data-toggle="modal" data-target="#exampleModal">
+                Edit
+            </button>
+            </td>
             </tr>
             `
+            
     })
     container.html(item)
 }
+
 
 form.on('submit', function (e) {
     e.preventDefault()
@@ -74,6 +81,8 @@ function doFilter() {
             return h.age >= filterAge;
         })
     }
+    
+    
 
     render(userslist, result)
 }
@@ -114,8 +123,15 @@ function doSort(rel) {
     render(userslist, users)
 
 }
-$('#myModal').on('shown.bs.modal', function () {
-    $('#myInput').trigger('focus')
-    console.log(myInput)
-  })
-
+// $('#myModal').on('shown.bs.modal', function () {
+//     $('#myInput').trigger('focus')
+//   })
+// $('.btn.btn-primary.edit').on('click', function () {
+//     $('.edit')
+// })
+// $(document).on('click','.edit', function() {
+//     //...
+//     $('#exampleModal').trigger('focus')
+//   })
+  
+ 
