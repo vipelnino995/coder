@@ -8,6 +8,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"
         integrity="sha512-3gJwYpMe3QewGELv8k/BX9vcqhryRdzRMxVfq6ngyWXwo03GFEzjsUm8Q7RZcHPHksttq7/GFoxjCVUjkjvPdw=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./style.css">
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
         integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
@@ -20,7 +21,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
-
+    
     <style>
         .opacity-03 {
             opacity: 0.3;
@@ -145,33 +146,25 @@
                                     </span>
                                 </th>
                             </tr>
-                            
+                        </thead>
+                        <tbody id="userslist">
+                            <tr>
+                                <td></td>
+
+                            </tr>
+                        </tbody>
+                    </table>
                 </div>
-
-                </thead>
-
-                <tbody id="userslist">
-                    <tr>
-                        <td></td> 
-                        
-                    </tr>
-                </tbody>
-                </table>
             </div>
         </div>
-    </div>
 
 
 
     </div>
 
-    <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary" data-toggle="modal">
-        Launch demo modal
-    </button>
 
     <!-- Modal -->
-     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    <div class="modal fade" id="studentDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -181,17 +174,35 @@
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                 
-                    <input type="text">fullName
-                    <input type="text">class
-                    <input type="text">Age
+
+                <div class="form-group">
+                    <label for="name-detail">Ten hoc sinh</label>
+                    <input type="text" id="name-detail" name="name-detail" class="form-control"
+                        placeholder="nameDetail...">
                 </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                    <button type="button" class="btn btn-primary">Save changes</button>
+                <div class="form-group">
+                    <label for="age-detail">Age</label>
+                    <input type="text" id="age-detail" name="age-detail" class="form-control"
+                        placeholder="ageDetail...">
+                </div>
+                <div class="form-group">
+                    <label for="class-detail">Class</label>
+                    <select name="class-detail" class="form-control" id="class-detail">
+                        <option value="">All class</option>
+                            <option value="1">Class 1</option>
+                            <option value="2">Class 2</option>
+                            <option value="3">Class 3</option>
+                            <option value="4">Class 4</option>
+                            <option value="5">Class 5</option>
+                    </select>
                 </div>
             </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div>
         </div>
+    </div>
     </div>
 
 
@@ -200,7 +211,7 @@
 
 
 
-    <script src="./core.js"></script>
+    <script src="./core2.js"></script>
 
 
 </body>

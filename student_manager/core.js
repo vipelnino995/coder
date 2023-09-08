@@ -3,7 +3,7 @@
 var userslist = $('#userslist')
 var form = $('#submit')
 var click = $('#click')
-var edit = $('#exampleModal')
+
 var users = [
     { stt: 1, name: 'nhat', class: 1, age: 19 },
     { stt: 2, name: 'loc', class: 3, age: 23 },
@@ -21,13 +21,14 @@ function render(container, items) {
                 <td>${h.name}</td>
                 <td>${h.class}</td>
                 <td>${h.age}</td>
-                <td> <button type="button" class="btn btn-primary edit" data-toggle="modal" data-target="#exampleModal">
-                Edit
-            </button>
-            </td>
+                <td> 
+                    <button type="button" class="btn btn-primary edit" data-toggle="modal" id="${h.stt}">
+                        Edit
+                    </button>
+                </td>
             </tr>
             `
-            
+
     })
     container.html(item)
 }
@@ -81,8 +82,8 @@ function doFilter() {
             return h.age >= filterAge;
         })
     }
-    
-    
+
+
 
     render(userslist, result)
 }
@@ -100,9 +101,9 @@ $('.sort.small').on('click', function () {
         $(this).find('.fa.fa-arrow-down').removeClass("opacity-03");
         sortType = 'desc';
     }
-    
-    sortBy = $(this).attr('abc');
 
+    sortBy = $(this).attr('abc');
+    
     doSort(sortBy);
 });
 
@@ -129,9 +130,18 @@ function doSort(rel) {
 // $('.btn.btn-primary.edit').on('click', function () {
 //     $('.edit')
 // })
-// $(document).on('click','.edit', function() {
-//     //...
-//     $('#exampleModal').trigger('focus')
-//   })
-  
- 
+$(document).on('click','.edit', function() {
+    //...
+   
+    $('#studentDetail').modal('show');
+
+    var studentId = $(this).attr('id');
+    var inFo = users.find(function (h) {
+         return h.stt == studentId;
+    });
+
+    $('#name-detail').val(inFo.name)
+    $('#class-detail').val(inFo.class)
+    $('#age-detail').val(inFo.age)
+   
+})
